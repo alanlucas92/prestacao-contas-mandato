@@ -63,6 +63,11 @@ section{min-height:100svh;padding:90px 6vw;display:flex;flex-direction:column;ju
 .mini-stats .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .mini-stats .num{font-family:'Sora',sans-serif;font-weight:800;font-size:1.7rem;color:var(--roxo-700)}
 .mini-stats .card.destaque{background:linear-gradient(160deg,var(--roxo-700),var(--roxo-500));color:#fff}
+.mini-stats .card.destaque-recorde{padding:26px 20px;transform:scale(1.12);box-shadow:0 16px 40px rgba(91,33,182,.35);z-index:2}
+.mini-stats .card.destaque-recorde:hover{transform:scale(1.16) translateY(-4px)}
+.mini-stats .card.destaque-recorde .crescimento .num{font-size:2.4rem}
+.mini-stats .card.destaque-recorde .selo-recorde{font-size:.68rem;padding:5px 12px}
+.mini-stats .card.destaque-recorde small{font-size:.92rem;font-weight:600;margin-top:4px;display:block}
 .mini-stats .card.destaque .num{color:var(--verde-300)}
 .mini-stats small{font-size:.78rem;color:inherit;opacity:.8}.selo-recorde{font-size:.62rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;background:var(--verde-400);color:var(--roxo-900);padding:4px 10px;border-radius:999px;display:inline-block;margin-bottom:10px;box-shadow:0 4px 14px rgba(74,222,128,.45);animation:pulseSelo 2s ease-in-out infinite}
 @keyframes pulseSelo{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
