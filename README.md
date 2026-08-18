@@ -1,6 +1,26 @@
 # Prestação de Contas do Mandato 2023-2026
 ## Parliamentary Accountability Report 2023-2026
 
+## 📸 Preview
+
+### Página inicial
+![Hero](screenshots/05-hero.png)
+
+### Quem é Cloara
+![Quem é Cloara](screenshots/04-quem-e-cloara.png)
+
+### Saúde — resumo por região
+![Saúde resumo](screenshots/03-saude-resumo.png)
+
+### Saúde — registros detalhados
+![Saúde detalhes](screenshots/02-saude-detalhes.png)
+
+### Cidades e Infraestrutura
+![Cidades e Infraestrutura](screenshots/01-cidades-infraestrutura.png)
+
+### Galeria — mais de R$74 milhões transformados em vida real
+![Galeria de fotos](screenshots/06-galeria-fotos.png)
+
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)](https://github.com)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34C26?style=flat-square&logo=html5&logoColor=white)](https://html5.org)
