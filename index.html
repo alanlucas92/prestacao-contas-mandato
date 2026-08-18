@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- 
+    ========================================
+    META TAGS & CONFIGURAÇÃO
+    Meta Tags & Configuration
+    ======================================== 
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440">
+  <meta name="description" content="Prestação de Contas do Mandato - Deputada Cloara Pinheiro. Emendas destinadas 2023-2026.">
+  <meta name="author" content="Alan Lucas Pereira">
+  <meta name="theme-color" content="#5B21B6">
+  
+  <title>Emendas Destinadas | Deputada Cloara Pinheiro</title>
+  
+  <!-- 
+    ========================================
+    FONTS (Google Fonts)
+    ======================================== 
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- 
+    ========================================
+    ESTILOS / STYLESHEETS
+    ======================================== 
+  -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon (adicionar conforme necessário) / Favicon (add as needed) -->
+  <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico"> -->
+</head>
+
+<body>
+  <!-- 
+    ========================================
+    SEÇÃO HERO (PRIMEIRA SEÇÃO)
+    Hero Section (Landing/Cover)
+    
+    Exibe o título principal, valor total e foto de destaque
+    Displays main title, total value, and featured photo
+    ======================================== 
+  -->
+  <section class="hero">
+    <!-- Tag com indicador pulsante / Tag with pulsing indicator -->
+    <span class="tag">
+      <span class="pontinho"></span>
+      Emendas Parlamentares
+    </span>
+    
+    <!-- Título principal com destaque em verde / Main title with green highlight -->
+    <h1>
+      Emendas Destinadas <span>2023–2026</span>
+    </h1>
+    
+    <!-- Subtítulo descritivo / Descriptive subtitle -->
+    <p class="sub">
+      Confira abaixo todos os investimentos realizados através das emendas parlamentares 
+      destinadas pelo mandato da Deputada Cloara Pinheiro ao Estado do Paraná.
+    </p>
+    
+    <!-- Valor total em destaque / Highlighted total value -->
+    <div class="valor-hero">
+      <div class="num">R$ 23.2M</div>
+      <small>investidos em projetos</small>
+    </div>
+    
+    <!-- Foto de capa / Cover photo -->
+    <div class="foto-capa">
+      <img src="assets/imagens/cloara-capa.jpg" alt="Deputada Cloara Pinheiro">
+    </div>
+    
+    <!-- Hint de scroll / Scroll hint -->
+    <div class="scroll-hint">
+      <span>Descubra</span>
+      <span class="seta"></span>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    SEÇÃO SOBRE
+    About Section
+    
+    Apresenta informações sobre o mandato e estatísticas principais
+    Presents mandate information and key statistics
+    ======================================== 
+  -->
+  <section class="sobre">
+    <div class="sobre-grid">
+      <!-- Foto lateral / Side photo -->
+      <div class="foto-sobre">
+        <img src="assets/imagens/cloara-sobre.jpg" alt="Deputada Cloara Pinheiro - Sobre">
+      </div>
+      
+      <!-- Conteúdo textual / Text content -->
+      <div>
+        <h2>Sobre o <em>Mandato</em></h2>
+        
+        <p>
+          A Deputada Estadual Cloara Pinheiro atua no mandato 2023-2026 com foco em 
+          políticas sociais, infraestrutura e desenvolvimento sustentável do Estado do Paraná.
+        </p>
+        
+        <p>
+          Através das emendas parlamentares, o mandato direcionou recursos para diversos 
+          projetos que beneficiam diretamente a população paranaense.
+        </p>
+        
+        <!-- Mini estatísticas / Mini stats -->
+        <div class="mini-stats">
+          <div class="card">
+            <div class="num">9</div>
+            <small>Áreas de Atuação</small>
+          </div>
+          <div class="card">
+            <div class="num">23.2M</div>
+            <small>Emendas Totais</small>
+          </div>
+          <div class="card destaque">
+            <div class="num">40+</div>
+            <small>Municípios Atendidos</small>
+          </div>
+        </div>
+        
+        <!-- Cards de história / Story cards -->
+        <div class="historia-extra">
+          <div class="cartao-historia">
+            <h3>Missão</h3>
+            <p>
+              Transformar recursos em oportunidades reais, criando impacto social positivo 
+              através de políticas públicas eficientes e transparentes.
+            </p>
+          </div>
+          <div class="cartao-historia carolina">
+            <h3>Visão</h3>
+            <p>
+              Ser referência em gestão pública, promovendo desenvolvimento sustentável e 
+              melhorando a qualidade de vida dos paranaenses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    SEÇÕES DE TEMAS (ÁREAS DE ATUAÇÃO)
+    Theme Sections (Action Areas)
+    
+    Cada seção representa uma área temática com suas emendas específicas
+    Each section represents a thematic area with its specific amendments
+    ======================================== 
+  -->
+
+  <!-- SAÚDE / HEALTH -->
+  <section class="tema fundo-roxo" id="saude">
+    <div class="cabecalho">
+      <div class="titulo-tema">
+        <div class="icone anim-batida" style="background: rgba(255,255,255,.1)">
+          <span class="emoji-icone">🏥</span>
+        </div>
+        <h2>Saúde</h2>
+      </div>
+      <div class="total">
+        R$ 3.2M
+        <small>Total em Emendas</small>
+      </div>
+    </div>
+    
+    <!-- Filtro por cidades / City filter -->
+    <div class="filtro-cidades">
+      <span class="chip"><strong>Londrina</strong><span class="cnt">5</span></span>
+      <span class="chip"><strong>Maringá</strong><span class="cnt">3</span></span>
+      <span class="chip"><strong>Outros</strong><span class="cnt">8</span></span>
+    </div>
+    
+    <!-- Listagem de emendas / Amendments list -->
+    <h3>Investimentos em Saúde</h3>
+    <p style="color: rgba(255,255,255,.8); margin-bottom: 20px;">
+      Recursos destinados para equipamentos médicos, infraestrutura hospitalar e programas de saúde preventiva.
+    </p>
+  </section>
+
+  <!-- EDUCAÇÃO / EDUCATION -->
+  <section class="tema fundo-branco" id="educacao">
+    <div class="cabecalho">
+      <div class="titulo-tema">
+        <div class="icone anim-flutua" style="background: var(--lilas-50)">
+          <span class="emoji-icone">📚</span>
+        </div>
+        <h2>Educação</h2>
+      </div>
+      <div class="total">
+        R$ 2.8M
+        <small>Total em Emendas</small>
+      </div>
+    </div>
+    
+    <div class="filtro-cidades">
+      <span class="chip"><strong>Londrina</strong><span class="cnt">6</span></span>
+      <span class="chip"><strong>Maringá</strong><span class="cnt">4</span></span>
+      <span class="chip"><strong>Outros</strong><span class="cnt">10</span></span>
+    </div>
+    
+    <h3>Investimentos em Educação</h3>
+    <p style="color: var(--texto-suave); margin-bottom: 20px;">
+      Recursos para construção de escolas, bibliotecas, laboratórios e programas educacionais.
+    </p>
+  </section>
+
+  <!-- ESPORTE / SPORTS -->
+  <section class="tema fundo-lilas" id="esporte">
+    <div class="cabecalho">
+      <div class="titulo-tema">
+        <div class="icone anim-balanca" style="background: rgba(92, 33, 182, .1)">
+          <span class="emoji-icone">⚽</span>
+        </div>
+        <h2>Esporte</h2>
+      </div>
+      <div class="total">
+        R$ 1.5M
+        <small>Total em Emendas</small>
+      </div>
+    </div>
+    
+    <div class="filtro-cidades">
+      <span class="chip"><strong>Londrina</strong><span class="cnt">3</span></span>
+      <span class="chip"><strong>Interior</strong><span class="cnt">7</span></span>
+    </div>
+    
+    <h3>Investimentos em Esporte</h3>
+    <p style="color: var(--texto-suave); margin-bottom: 20px;">
+      Recursos para construção de quadras, campos de futebol e centros de treinamento.
+    </p>
+  </section>
+
+  <!-- SOCIAL E FAMÍLIA / SOCIAL & FAMILY -->
+  <section class="tema fundo-branco" id="social">
+    <div class="cabecalho">
+      <div class="titulo-tema">
+        <div class="icone anim-pisca" style="background: var(--lilas-50)">
+          <span class="emoji-icone">👨‍👩‍👧</span>
+        </div>
+        <h2>Social e Família</h2>
+      </div>
+      <div class="total">
+        R$ 4.1M
+        <small>Total em Emendas</small>
+      </div>
+    </div>
+    
+    <div class="filtro-cidades">
+      <span class="chip"><strong>Londrina</strong><span class="cnt">8</span></span>
+      <span class="chip"><strong>Maringá</strong><span class="cnt">5</span></span>
+      <span class="chip"><strong>Outros</strong><span class="cnt">12</span></span>
+    </div>
+    
+    <h3>Investimentos em Políticas Sociais</h3>
+    <p style="color: var(--texto-suave); margin-bottom: 20px;">
+      Recursos para centros de assistência social, programas de alimentação e habitação.
+    </p>
+  </section>
+
+  <!-- CIDADES E INFRAESTRUTURA / CITIES & INFRASTRUCTURE -->
+  <section class="tema fundo-roxo" id="cidades">
+    <div class="cabecalho">
+      <div class="titulo-tema">
+        <div class="icone anim-gira" style="background: rgba(255,255,255,.1)">
+          <span class="emoji-icone">🏗️</span>
+        </div>
+        <h2>Cidades e Infraestrutura</h2>
+      </div>
+      <div class="total">
+        R$ 6.5M
+        <small>Total em Emendas</small>
+      </div>
+    </div>
+    
+    <div class="filtro-cidades">
+      <span class="chip"><strong>Londrina</strong><span class="cnt">7</span></span>
+      <span class="chip"><strong>Interior</strong><span class="cnt">15</span></span>
+    </div>
+    
+    <h3>Investimentos em Infraestrutura</h3>
+    <p style="color: rgba(255,255,255,.8); margin-bottom: 20px;">
+      Recursos para pavimentação, saneamento básico, drenagem urbana e mobilidade.
+    </p>
+  </section>
+
+  <!-- SEGURANÇA / SECURITY -->
+  <section class="tema fundo-lilas" id="seguranca">
+    <div class="cabecalho">
+      <div class="titulo-tema">
+        <div class="icone anim-cresce" style="background: rgba(92, 33, 182, .1)">
+          <span class="emoji-icone">🚔</span>
+        </div>
+        <h2>Segurança</h2>
+      </div>
+      <div class="total">
+        R$ 1.8M
+        <small>Total em Emendas</small>
+      </div>
+    </div>
+    
+    <div class="filtro-cidades">
+      <span class="chip"><strong>Londrina</strong><span class="cnt">4</span></span>
+      <span class="chip"><strong>Outros</strong><span class="cnt">6</span></span>
+    </div>
+    
+    <h3>Investimentos em Segurança</h3>
+    <p style="color: var(--texto-suave); margin-bottom: 20px;">
+      Recursos para equipamentos de segurança, videomonitoramento e programas preventivos.
+    </p>
+  </section>
+
+  <!-- AGROPECUÁRIA / AGRICULTURE -->
+  <section class="tema fundo-branco" id="agro">
+    <div class="cabecalho">
+      <div class="titulo-tema">
+        <div class="icone anim-balanca" style="background: var(--lilas-50)">
+          <span class="emoji-icone">🌾</span>
+        </div>
+        <h2>Agropecuária</h2>
+      </div>
+      <div class="total">
+        R$ 1.5M
+        <small>Total em Emendas</small>
+      </div>
+    </div>
+    
+    <div class="filtro-cidades">
+      <span class="chip"><strong>Interior</strong><span class="cnt">10</span></span>
+    </div>
+    
+    <h3>Investimentos em Agropecuária</h3>
+    <p style="color: var(--texto-suave); margin-bottom: 20px;">
+      Recursos para modernização agrícola, irrigação e estrutura de armazenagem.
+    </p>
+  </section>
+
+  <!-- DEMAIS TEMAS / OTHER THEMES -->
+  <section class="tema fundo-roxo" id="demais">
+    <div class="cabecalho">
+      <div class="titulo-tema">
+        <div class="icone anim-pisca" style="background: rgba(255,255,255,.1)">
+          <span class="emoji-icone">✨</span>
+        </div>
+        <h2>Demais Temas</h2>
+      </div>
+      <div class="total">
+        R$ 1.8M
+        <small>Total em Emendas</small>
+      </div>
+    </div>
+    
+    <h3>Outros Investimentos</h3>
+    <p style="color: rgba(255,255,255,.8); margin-bottom: 20px;">
+      Recursos destinados a projetos diversos de desenvolvimento regional e sustentabilidade.
+    </p>
+  </section>
+
+  <!-- 
+    ========================================
+    NAVEGAÇÃO (DOTS LATERAIS)
+    Navigation Dots - Anchor Links
+    
+    Permite navegação rápida entre as seções
+    Allows quick navigation between sections
+    ======================================== 
+  -->
+  <nav class="nav-dots">
+    <a href="#hero" class="ativo" title="Topo"></a>
+    <a href="#sobre" title="Sobre"></a>
+    <a href="#saude" title="Saúde"></a>
+    <a href="#educacao" title="Educação"></a>
+    <a href="#esporte" title="Esporte"></a>
+    <a href="#social" title="Social"></a>
+    <a href="#cidades" title="Cidades"></a>
+    <a href="#seguranca" title="Segurança"></a>
+    <a href="#agro" title="Agropecuária"></a>
+    <a href="#demais" title="Demais"></a>
+  </nav>
+
+  <!-- 
+    ========================================
+    SCRIPT PRINCIPAL
+    Main JavaScript
+    
+    Gerencia interatividade, navegação e editor (se habilitado)
+    Manages interactivity, navigation, and editor (if enabled)
+    ======================================== 
+  -->
+  <script>
+    /* ====================================
+       CONFIGURAÇÃO INICIAL
+       Initial Setup
+       ==================================== */
+    
+    // Salvar HTML original para recuperação / Save original HTML for recovery
+    const htmlOriginal = document.documentElement.outerHTML;
+    
+    // Histórico de edições / Edit history
+    let historico = [];
+    let indiceHist = -1;
+    
+    /* ====================================
+       ARMAZENAMENTO LOCAL
+       Local Storage Management
+       ==================================== */
+    
+    const store = {
+      // Salvar conteúdo / Save content
+      set: (html) => {
+        try {
+          localStorage.setItem('emendas_backup', html);
+          return true;
+        } catch (e) {
+          console.warn('LocalStorage cheio / LocalStorage full:', e);
+          return false;
+        }
+      },
+      // Recuperar conteúdo / Retrieve content
+      get: () => {
+        try {
+          return localStorage.getItem('emendas_backup');
+        } catch (e) {
+          return null;
+        }
+      },
+      // Limpar armazenamento / Clear storage
+      del: () => {
+        try {
+          localStorage.removeItem('emendas_backup');
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+    };
+    
+    /* ====================================
+       NAVEGAÇÃO ENTRE SEÇÕES
+       Section Navigation
+       ==================================== */
+    
+    window.addEventListener('load', () => {
+      const sections = document.querySelectorAll('section[id]');
+      
+      window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (pageYOffset >= sectionTop - 300) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        // Atualizar dot ativo / Update active dot
+        document.querySelectorAll('.nav-dots a').forEach(link => {
+          link.classList.remove('ativo');
+        });
+        
+        if (current) {
+          const activeLink = document.querySelector(`.nav-dots a[href="#${current}"]`);
+          if (activeLink) {
+            activeLink.classList.add('ativo');
+          }
+        }
+      });
+    });
+    
+    /* ====================================
+       ANIMAÇÕES AO CARREGAR
+       Animations on Load
+       ==================================== */
+    
+    window.addEventListener('load', () => {
+      // Animar elementos com classe 'revela' / Animate elements with 'revela' class
+      document.querySelectorAll('.revela').forEach((el, index) => {
+        el.style.animationDelay = (index * 0.1) + 's';
+      });
+    });
+  </script>
+</body>
+</html>

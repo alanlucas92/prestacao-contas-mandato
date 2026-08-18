@@ -1,0 +1,743 @@
+/* ========================================
+   PRESTAÇÃO DE CONTAS - STYLES.CSS
+   
+   Parliamentary Accountability Report
+   Design System & Styling
+   
+   Created by: Alan Lucas Pereira
+   Technologies: HTML5, CSS3, Responsive Design
+   ======================================== */
+
+/* ========================================
+   1. VARIÁVEIS DE CORES E TOKENS
+   Color Variables & Design Tokens
+   ======================================== */
+
+:root {
+  /* Paleta de Cores / Color Palette */
+  --roxo-900: #3B1163;      /* Roxo Escuro / Dark Purple */
+  --roxo-700: #5B21B6;      /* Roxo Principal / Primary Purple */
+  --roxo-500: #7C3AED;      /* Roxo Claro / Light Purple */
+  
+  /* Tons de Lilás / Lilac Tones */
+  --lilas-300: #C4B5FD;     /* Lilás Médio / Medium Lilac */
+  --lilas-100: #EDE6FB;     /* Lilás Claro / Light Lilac */
+  --lilas-50: #F7F3FD;      /* Lilás Muito Claro / Very Light Lilac */
+  
+  /* Verde (Destaques) / Green (Highlights) */
+  --verde-300: #86EFAC;     /* Verde Claro / Light Green */
+  --verde-400: #4ADE80;     /* Verde Principal / Primary Green */
+  --verde-glow: rgba(134, 239, 172, .45); /* Brilho Verde / Green Glow */
+  
+  /* Neutros / Neutral Colors */
+  --branco: #FFFFFF;        /* Branco / White */
+  --texto: #2A1A40;         /* Texto Principal / Primary Text */
+  --texto-suave: #6B5A85;   /* Texto Secundário / Secondary Text */
+  
+  /* Componentes / Components */
+  --radius: 22px;           /* Border Radius padrão / Default Border Radius */
+  --shadow: 0 18px 45px rgba(59, 17, 99, .16); /* Sombra padrão / Default Shadow */
+}
+
+/* ========================================
+   2. RESET E ESTILOS GLOBAIS
+   Reset & Global Styles
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Scroll suave / Smooth scrolling */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--texto);
+  background: var(--lilas-50);
+  overflow-x: hidden; /* Previne scrollbar horizontal / Prevents horizontal scrollbar */
+}
+
+/* Títulos usam fonte 'Sora' / Headings use 'Sora' font */
+h1, h2, h3, h4, .display {
+  font-family: 'Sora', sans-serif;
+}
+
+/* ========================================
+   3. NAVEGAÇÃO (DOTS)
+   Navigation Dots - Indicadores de Seção / Section Indicators
+   ======================================== */
+
+.nav-dots {
+  position: fixed;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 90;
+}
+
+.nav-dots a {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--lilas-300);
+  transition: 0.3s ease; /* Transição suave / Smooth transition */
+  display: block;
+}
+
+/* Dot ativo / Active dot */
+.nav-dots a.ativo {
+  background: var(--roxo-700);
+  transform: scale(1.5);
+  box-shadow: 0 0 0 5px rgba(124, 58, 237, .15);
+}
+
+/* Esconder nav dots em mobile (< 720px) / Hide nav dots on mobile */
+@media (max-width: 720px) {
+  .nav-dots {
+    display: none;
+  }
+}
+
+/* ========================================
+   4. SEÇÕES GERAIS
+   General Sections
+   ======================================== */
+
+section {
+  min-height: 100svh; /* 100% Screen Height / 100% da altura da tela */
+  padding: 90px 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========================================
+   5. TAGS E BADGES
+   Tags & Badges
+   ======================================== */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--branco);
+  color: var(--roxo-700);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  width: max-content;
+  margin-bottom: 22px;
+}
+
+/* Pontinho pulsante dentro da tag / Pulsing dot inside tag */
+.tag .pontinho {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--verde-400);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--verde-glow);
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+/* ========================================
+   6. SEÇÃO HERO (PRIMEIRA SEÇÃO)
+   Hero Section (First Section)
+   ======================================== */
+
+.hero {
+  background: 
+    radial-gradient(1200px 700px at 80% -10%, #7C3AED 0%, transparent 55%),
+    radial-gradient(900px 600px at -10% 110%, #4ADE8033 0%, transparent 50%),
+    linear-gradient(160deg, var(--roxo-900) 0%, var(--roxo-700) 100%);
+  color: var(--branco);
+  align-items: flex-start;
+}
+
+.hero .tag {
+  background: rgba(255, 255, 255, .12);
+  color: var(--branco);
+  box-shadow: none;
+  backdrop-filter: blur(6px); /* Vidro fosco / Frosted glass effect */
+}
+
+/* Título principal / Main title */
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  max-width: 14ch;
+}
+
+/* Destaque em verde no título / Green highlight in title */
+.hero h1 span {
+  color: var(--verde-300);
+}
+
+/* Subtítulo / Subtitle */
+.hero p.sub {
+  margin-top: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--lilas-100);
+  max-width: 46ch;
+}
+
+/* Valor/Número grande / Large value/number */
+.hero .valor-hero {
+  margin-top: 38px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero .valor-hero .num {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, var(--verde-300));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Texto gradiente / Gradient text */
+}
+
+.hero .valor-hero small {
+  font-size: clamp(.9rem, 1.6vw, 1.15rem);
+  color: var(--lilas-100);
+}
+
+/* Foto de capa / Cover photo */
+.foto-capa {
+  position: absolute;
+  right: 5vw;
+  bottom: 0;
+  width: min(420px, 42vw);
+  aspect-ratio: 3/4;
+  border-radius: 28px 28px 0 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .05));
+  border: 2px dashed rgba(255, 255, 255, .35);
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lilas-100);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.foto-capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px 28px 0 0;
+}
+
+/* Responsividade Hero / Hero Responsiveness */
+@media (max-width: 860px) {
+  .foto-capa {
+    position: relative;
+    right: auto;
+    width: 100%;
+    max-width: 340px;
+    margin: 40px auto 0;
+    aspect-ratio: 4/3;
+    border-radius: 24px;
+    border-bottom: 2px dashed rgba(255, 255, 255, .35);
+  }
+
+  .hero {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero .tag {
+    margin-inline: auto;
+  }
+
+  .hero .valor-hero {
+    justify-content: center;
+  }
+}
+
+/* Scroll Hint (Seta piscante) / Scroll Hint (Blinking arrow) */
+.scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  color: var(--lilas-100);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.scroll-hint .seta {
+  width: 2px;
+  height: 26px;
+  background: linear-gradient(180deg, var(--verde-300), transparent);
+  animation: desce 1.6s infinite;
+}
+
+@keyframes desce {
+  0% {
+    transform: scaleY(.2);
+    transform-origin: top;
+  }
+  60% {
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   7. SEÇÃO "SOBRE"
+   "About" Section
+   ======================================== */
+
+.sobre {
+  background: var(--branco);
+}
+
+/* Grid 2 colunas / 2-column grid */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .sobre-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Foto na seção sobre / Photo in about section */
+.foto-sobre {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--lilas-100), var(--lilas-300));
+  border: 2px dashed var(--roxo-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--roxo-700);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.foto-sobre img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Títulos e textos da seção sobre / Titles and text in about section */
+.sobre h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.sobre h2 em {
+  font-style: normal;
+  color: var(--roxo-500);
+}
+
+.sobre p {
+  color: var(--texto-suave);
+  margin-bottom: 14px;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+/* Mini estatísticas / Mini stats */
+.mini-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 26px;
+}
+
+@media (max-width: 520px) {
+  .mini-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mini-stats .card {
+  background: var(--lilas-50);
+  border-radius: 16px;
+  padding: 18px 14px;
+  text-align: center;
+  border: 1px solid var(--lilas-100);
+  transition: 0.3s ease;
+}
+
+.mini-stats .card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.mini-stats .num {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: var(--roxo-700);
+}
+
+/* Card destacado / Highlighted card */
+.mini-stats .card.destaque {
+  background: linear-gradient(160deg, var(--roxo-700), var(--roxo-500));
+  color: #fff;
+}
+
+.mini-stats .card.destaque .num {
+  color: var(--verde-300);
+}
+
+.mini-stats small {
+  font-size: 0.78rem;
+  color: inherit;
+  opacity: 0.8;
+}
+
+/* Grid de histórias / Stories grid */
+.historia-extra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 36px;
+}
+
+@media (max-width: 760px) {
+  .historia-extra {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cartões de história / Story cards */
+.cartao-historia {
+  background: var(--lilas-50);
+  border-radius: 18px;
+  padding: 26px 24px;
+  border-left: 4px solid var(--verde-400);
+  transition: 0.3s ease;
+}
+
+.cartao-historia:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.cartao-historia.carolina {
+  border-left-color: var(--roxo-500);
+  background: linear-gradient(160deg, var(--lilas-100), var(--lilas-50));
+}
+
+.cartao-historia h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.05rem;
+  color: var(--roxo-900);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartao-historia h3::before {
+  content: '';
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--verde-400);
+  flex: none;
+}
+
+.cartao-historia.carolina h3::before {
+  background: var(--roxo-500);
+}
+
+.cartao-historia p {
+  font-size: 0.92rem;
+  color: var(--texto-suave);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.cartao-historia p:last-child {
+  margin-bottom: 0;
+}
+
+.cartao-historia .estrela {
+  color: var(--roxo-500);
+  font-weight: 700;
+}
+
+.cartao-historia a {
+  color: var(--roxo-700);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--verde-400);
+}
+
+.cartao-historia a:hover {
+  color: var(--roxo-900);
+}
+
+/* ========================================
+   8. ÍCONES E ANIMAÇÕES
+   Icons & Animations
+   ======================================== */
+
+.icone {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.icone svg {
+  width: 34px;
+  height: 34px;
+}
+
+.icone .emoji-icone {
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* Animações diversas / Various animations */
+.anim-batida {
+  animation: batida 1.6s ease-in-out infinite;
+}
+
+@keyframes batida {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.12); }
+  40% { transform: scale(1); }
+  55% { transform: scale(1.09); }
+}
+
+.anim-flutua {
+  animation: flutua 3.2s ease-in-out infinite;
+}
+
+@keyframes flutua {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.anim-gira {
+  animation: gira 7s linear infinite;
+}
+
+@keyframes gira {
+  to { transform: rotate(360deg); }
+}
+
+.anim-balanca {
+  animation: balanca 2.6s ease-in-out infinite;
+}
+
+@keyframes balanca {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+
+.anim-pisca {
+  animation: pisca 2.2s ease-in-out infinite;
+}
+
+@keyframes pisca {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .45; }
+}
+
+.anim-cresce {
+  animation: cresce 2.4s ease-in-out infinite;
+}
+
+@keyframes cresce {
+  0%, 100% { transform: scaleY(.85); transform-origin: bottom; }
+  50% { transform: scaleY(1.05); }
+}
+
+/* Respeitar preferência de motion reduzido / Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001s !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
+}
+
+/* ========================================
+   9. SEÇÕES DE TEMA (DADOS)
+   Theme Sections (Data Sections)
+   ======================================== */
+
+.tema .cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.titulo-tema {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.tema h2 {
+  font-size: clamp(1.7rem, 3.6vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.tema .total {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  color: var(--roxo-700);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.tema .total small {
+  display: block;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tema h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 26px 0 12px;
+  color: var(--roxo-900);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tema h3::before {
+  content: '';
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--verde-400);
+}
+
+/* ========================================
+   10. FILTROS E CHIPS
+   Filters & Chips (Interactive Elements)
+   ======================================== */
+
+.filtro-cidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 20px;
+}
+
+.chip {
+  background: var(--branco);
+  border: 1px solid var(--lilas-100);
+  padding: 7px 15px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--texto-suave);
+  transition: 0.25s ease;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chip:hover {
+  border-color: var(--verde-400);
+  color: var(--roxo-700);
+  transform: translateY(-2px);
+}
+
+.chip .cnt {
+  font-size: 0.68rem;
+  background: var(--lilas-100);
+  color: var(--roxo-700);
+  padding: 1px 6px;
+  border-radius: 99px;
+  font-weight: 700;
+}
+
+/* ========================================
+   11. CORES DE FUNDO
+   Background Colors
+   ======================================== */
+
+.fundo-branco { background: var(--branco); }
+.fundo-roxo { background: var(--roxo-900); color: var(--branco); }
+.fundo-lilas { background: var(--lilas-50); }
+
+/* ========================================
+   12. UTILITÁRIOS
+   Utility Classes
+   ======================================== */
+
+.revela {
+  animation: revela 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes revela {
+  to { opacity: 1; }
+}
+
+/* ========================================
+   Fim do CSS / End of CSS
+   ======================================== */
