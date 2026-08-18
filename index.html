@@ -65,6 +65,11 @@ section{min-height:100svh;padding:90px 6vw;display:flex;flex-direction:column;ju
 .mini-stats .card.destaque{background:linear-gradient(160deg,var(--roxo-700),var(--roxo-500));color:#fff}
 .mini-stats .card.destaque .num{color:var(--verde-300)}
 .mini-stats small{font-size:.78rem;color:inherit;opacity:.8}
+.selo-recorde{font-size:.62rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;background:var(--verde-400);color:var(--roxo-900);padding:4px 10px;border-radius:999px;display:inline-block;margin-bottom:10px;box-shadow:0 4px 14px rgba(74,222,128,.45);animation:pulseSelo 2s ease-in-out infinite}
+@keyframes pulseSelo{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.crescimento{display:flex;align-items:baseline;justify-content:center;gap:8px}
+.crescimento .de{font-size:1.15rem;font-weight:700;color:rgba(255,255,255,.5);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.45)}
+.crescimento .seta{font-size:1.3rem;color:var(--verde-300)}
 .historia-extra{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
 @media(max-width:760px){.historia-extra{grid-template-columns:1fr}}
 .cartao-historia{background:var(--lilas-50);border-radius:18px;padding:26px 24px;border-left:4px solid var(--verde-400);transition:.3s}
@@ -402,7 +407,7 @@ html.precisa-girar body > *:not(.aviso-girar){display:none!important}
       
       <div class="mini-stats">
         <div class="card revela d1 na-tela"><div class="num" data-contador="" data-valor="35151">35.151</div><small class="">votos em 2022</small></div>
-        <div class="card destaque revela d2 na-tela"><div class="num" data-contador="" data-valor="225">225</div><small class="">Procuradorias da Mulher</small></div>
+        <div class="card destaque destaque-recorde revela d2 na-tela"><div class="selo-recorde">🏆 RECORDE HISTÓRICO — A MAIOR DO BRASIL</div><div class="crescimento"><span class="de">113</span><span class="seta">→</span><span class="num" data-contador="" data-valor="226">226</span></div><small class="">Procuradorias da Mulher</small></div>
         <div class="card revela d3 na-tela"><div class="num" data-contador="" data-valor="50">50</div><small class="">municípios beneficiados</small></div>
       </div>
     </div>
