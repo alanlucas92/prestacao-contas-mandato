@@ -63,8 +63,9 @@ section{min-height:100svh;padding:90px 6vw;display:flex;flex-direction:column;ju
 .mini-stats .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .mini-stats .num{font-family:'Sora',sans-serif;font-weight:800;font-size:1.7rem;color:var(--roxo-700)}
 .mini-stats .card.destaque{background:linear-gradient(160deg,var(--roxo-700),var(--roxo-500));color:#fff}
-.mini-stats .card.destaque-recorde{padding:26px 20px;transform:scale(1.12);box-shadow:0 16px 40px rgba(91,33,182,.35);z-index:2}
-.mini-stats .card.destaque-recorde:hover{transform:scale(1.16) translateY(-4px)}
+.mini-stats{align-items:stretch;margin-bottom:20px}
+.mini-stats .card.destaque-recorde{padding:26px 18px;box-shadow:0 16px 40px rgba(91,33,182,.35);position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
+.mini-stats .card.destaque-recorde:hover{transform:translateY(-6px)}
 .mini-stats .card.destaque-recorde .crescimento .num{font-size:2.4rem}
 .mini-stats .card.destaque-recorde .selo-recorde{font-size:.68rem;padding:5px 12px}
 .mini-stats .card.destaque-recorde small{font-size:.92rem;font-weight:600;margin-top:4px;display:block}
