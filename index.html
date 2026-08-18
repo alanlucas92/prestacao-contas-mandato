@@ -1252,6 +1252,8 @@ function posicionaToolbarGrupo(){
 
 function ligaEventosEditor(){
   document.getElementById('chaveEdicao').onclick=()=>{document.body.classList.contains('modo-edicao')?saiEdicao():entraEdicao();};
+  document.getElementById('chaveEdicao').style.display='none';
+  document.addEventListener('keydown',function(e){if(e.ctrlKey&&e.shiftKey&&e.key.toLowerCase()==='e'){var b=document.getElementById('chaveEdicao');b.style.display=(b.style.display==='none'?'flex':'none');}});
   removeListenersAntigos(); /* evita empilhar escutadores duplicados a cada undo/redo/nova página (causa de lentidão) */
 
   /* alça de altura da seção: tem prioridade (fase de captura) sobre o resto do sistema de clique/arraste */
